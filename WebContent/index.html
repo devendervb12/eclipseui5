@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.ui.layout"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		   
+		var oPage = new sap.m.Page({
+			title : "Employee Registration",
+			content : [
+				new sap.ui.layout.form.SimpleForm({
+					title : "Please Enter Employee Details",
+					content : [
+						new sap.m.Label({ text : "Employee Name"}),
+						new sap.m.Input()
+					]
+				})
+				
+			],
+			footer : new sap.m.Bar({
+				contentLeft : [
+					new sap.m.Button({ text : "Register"})
+				]
+			})
+		});
+		
+		
+		var oApp = new sap.m.App({ pages : [oPage]}).placeAt("content");
+		
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
